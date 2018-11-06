@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-game-button',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-button.component.css']
 })
 export class GameButtonComponent implements OnInit {
+  @Input()
+  color: string;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClick() {
+    console.log(`${this.color} clicked`)
   }
 
 }
