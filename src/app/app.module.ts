@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { GameComponent } from './components/game/game.component';
 import { GameButtonComponent } from './components/game/game-button/game-button.component';
+import { GameStateService } from './services/game-state.service';
 
 @NgModule({
   declarations: [
@@ -11,10 +12,8 @@ import { GameButtonComponent } from './components/game/game-button/game-button.c
     GameComponent,
     GameButtonComponent
   ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
+  imports: [BrowserModule],
+  providers: [GameStateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

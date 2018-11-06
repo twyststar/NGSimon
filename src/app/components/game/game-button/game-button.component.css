@@ -1,0 +1,51 @@
+button {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 4rem;
+  background-color: var(--black);
+  border: .25rem solid;
+}
+
+.green {
+  border-color: var(--green);
+  color: var(--green)
+}
+
+.blue {
+  border-color: var(--blue);
+  color: var(--blue)
+}
+
+.red {
+  border-color: var(--red);
+  color: var(--red)
+}
+
+.yellow {
+  border-color: var(--yellow);
+  color: var(--yellow)
+}
+
+.green:active,
+.green.active {
+  background-color: var(--green);
+  color: black;
+}
+
+.blue:active,
+.blue.active {
+  background-color: var(--blue);
+  color: black;
+}
+
+.red:active,
+.red.active {
+  background-color: var(--red);
+  color: black;
+}
+
+.yellow:active,
+.yellow.active {
+  background-color: var(--yellow);
+  color: black;
+}

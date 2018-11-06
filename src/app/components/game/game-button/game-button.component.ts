@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+// import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-game-button',
@@ -8,6 +9,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class GameButtonComponent implements OnInit {
   @Input()
   color: string;
+  @Output()
+  guess: EventEmitter<string> = new EventEmitter<string>();
+  active: true;
 
   constructor() { }
 
@@ -15,7 +19,7 @@ export class GameButtonComponent implements OnInit {
   }
 
   onClick() {
-    console.log(`${this.color} clicked`)
+    this.guess.emit(this.color);
   }
 
 }
